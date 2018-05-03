@@ -3,28 +3,28 @@
 		<div class="row">
 			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div id="logo-container">
-					<a href="#" title="Back">
+					<a href="#" *ngIf="!isLoginShow"  (click)="backEvent()" title="Back">
 						<i class="fa fa-arrow-left pull-left" aria-hidden="true"></i>
 					</a>
 					<img src="../../../assets/images/logo.png" alt="logo"/>
 				</div>
 			</div>
 			<div class="offset-sm-3 col-sm-6 offset-md-4 col-md-4" id="login-via-number">
-				<div class="enter-code">
+				<div class="enter-code" *ngIf="isEnterCodeShow" >
 					<h5>Enter Code</h5>
 				</div>
-				<div class="phone-message">
+				<div class="phone-message" *ngIf="isEnterCodeShow" >
 					<p>We have send you an SMS on +23948528352<br/>
 						with 6-digit verification code (OTP).
 					</p>
 				</div>
-				<div class="login-via-phone">
+				<div class="login-via-phone" *ngIf="isEnterPhoneNumberShow || isEnterCodeShow" >
 					<span>
 						<i class="fa fa-mobile" aria-hidden="true"></i>
 						Login via phone number and OTP
 					</span>
 				</div>
-				<form id="login_form" action="login_submit" method="post" accept-charset="utf-8">
+				<form id="login_form" method="post" accept-charset="utf-8" *ngIf="isEnterCodeShow">
 					<div class="form-group" id="sms_code">
 						<input class="form-control" type="text" placeholder="1" value="">
 						<input class="form-control" type="text" placeholder="2" value="">
@@ -33,13 +33,13 @@
 						<input class="form-control" type="text" placeholder="5" value="">
 						<input class="form-control" type="text" placeholder="6" value="">
 					</div>
-					<button type="submit" class="btn btn-info">Login</button>
+					<button type="button" class="btn btn-info">Login</button>
 				</form>
-				<form action="continue_submit" method="post" accept-charset="utf-8">
+				<form *ngIf="isEnterPhoneNumberShow" action="continue_submit" method="post" accept-charset="utf-8">
 					<div class="form-group">
 						<input type="text" name="phone-number" class="form-control" value="" placeholder="Enter your phone number">
 					</div>
-					<button type="submit" class="btn btn-info">Continue</button>
+					<button type="submit" class="btn btn-info" (click)="submitPhoneNumber()">Continue</button>
 				</form>
 			</div>
 			<div class="col-sm-12 offset-md-2 col-md-8">
@@ -48,14 +48,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="row login">
+		<div class="row login" *ngIf="isLoginShow">
 			<div class="col-sm-12 offset-md-2 col-md-8 login-gmail-container">
 				<div class="login-gmail">
 					<button type="button" class="btn btn-danger">
 						<span class="icon-container">
 							<i class="fa fa-google" aria-hidden="true" title="Login with gmail"></i>
 						</span>
-						<span class="text-container"><b>Login with gmail</b></span>
+						<span class="text-container" (click)="loginWithGmail()"><b>Login with gmail</b></span>
 					</button>
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 						<span class="icon-container">
 							<i class="fa fa-mobile" aria-hidden="true" title="Login via phone and OTP"></i>
 						</span>
-						<span class="text-container"><b>Login via phone number and OTP</b></span>
+						<span class="text-container" (click)="loginWithGmail()"><b>Login via phone number and OTP</b></span>
 					</button>
 				</div>
 			</div>
