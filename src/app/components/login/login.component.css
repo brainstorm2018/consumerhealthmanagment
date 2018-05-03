@@ -128,3 +128,9 @@ form {
 	padding: .3rem 2rem;
 	box-shadow: 2px 3px #000;
 }
+
+@media only screen and (max-width: 785px) {
+	.login-via-phone {
+		margin: .5rem 0;
+	}
+}
