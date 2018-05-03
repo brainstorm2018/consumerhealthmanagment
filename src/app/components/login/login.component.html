@@ -1,19 +1,36 @@
 <section id="login">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-12 col-md-offset-4 col-md-6">
+			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div id="logo-container">
+					<a href="#" title="Back">
+						<i class="fa fa-arrow-left pull-left" aria-hidden="true"></i>
+					</a>
 					<img src="../../../assets/images/logo.png" alt="logo"/>
 				</div>
 			</div>
-			<div class="col-sm-12 col-md-offset-4 col-md-6">
+			<div class="offset-sm-3 col-sm-6 offset-md-4 col-md-4" id="login-via-number">
+				<div class="login-via-phone">
+					<span>
+						<i class="fa fa-mobile" aria-hidden="true"></i>
+						Login via phone number and OTP
+					</span>
+				</div>
+				<form action="login_submit" method="get" accept-charset="utf-8">
+					<div class="form-group">
+						<input type="text" name="phone-number" class="form-control" value="" placeholder="Enter your phone number">
+					</div>
+					<button type="submit" class="btn btn-info">Continue</button>
+				</form>
+			</div>
+			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div id="phrase-container">
 					<img src="../../../assets/images/phrase1.png" alt="login-phrase"/>
 				</div>
 			</div>
 		</div>
 		<div class="row login">
-			<div class="col-sm-12 col-md-offset-4 col-md-6 login-gmail-container">
+			<div class="col-sm-12 offset-md-2 col-md-8 login-gmail-container">
 				<div class="login-gmail">
 					<button type="button" class="btn btn-danger">
 						<span class="icon-container">
@@ -23,10 +40,10 @@
 					</button>
 				</div>
 			</div>
-			<div class="col-sm-12 col-md-offset-4 col-md-6">
+			<div class="col-sm-12 offset-md-2 col-md-8">
 				<span id="or">Or</span>
 			</div>
-			<div class="col-sm-12 col-md-offset-4 col-md-6">
+			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div class="login-phone">
 					<button type="button" class="btn btn-success">
 						<span class="icon-container">
