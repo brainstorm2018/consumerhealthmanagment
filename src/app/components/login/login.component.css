@@ -103,6 +103,41 @@ form {
 	border-radius: 50px;
 }
 
+#sms_code input {
+	display: initial;
+	text-align: center;
+	width: 40px;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	border-radius: 0;
+	border-style: none none solid none;
+	background-color: #0c63ee;
+	border-width: 2px;
+	color: #fff;
+	margin-right: .5rem;
+}
+
+#sms_code input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #fff;
+	opacity: .5;
+}
+/* Internet Explorer 10-11 */
+#sms_code input:-ms-input-placeholder {
+	color: #fff;
+	opacity: .5;
+}
+/* Microsoft Edge */
+#sms_code input::-ms-input-placeholder {
+	color: #fff;
+	opacity: .5;
+}
+
+.form-control:focus {
+	box-shadow: none;
+}
+
+.enter-code,
+.phone-message,
 .login-via-phone {
 	color: #fff;
 	text-align: left;
@@ -111,7 +146,7 @@ form {
 
 .login-via-phone i {
 	font-size: 20px;
-	padding: 5px 5px 5px 0;
+	padding: 4px 5px 3px 0;
 	vertical-align: middle;
 	border-right: 1px solid #fff;
 }

@@ -10,13 +10,32 @@
 				</div>
 			</div>
 			<div class="offset-sm-3 col-sm-6 offset-md-4 col-md-4" id="login-via-number">
+				<div class="enter-code">
+					<h5>Enter Code</h5>
+				</div>
+				<div class="phone-message">
+					<p>We have send you an SMS on +23948528352<br/>
+						with 6-digit verification code (OTP).
+					</p>
+				</div>
 				<div class="login-via-phone">
 					<span>
 						<i class="fa fa-mobile" aria-hidden="true"></i>
 						Login via phone number and OTP
 					</span>
 				</div>
-				<form action="login_submit" method="get" accept-charset="utf-8">
+				<form id="login_form" action="login_submit" method="post" accept-charset="utf-8">
+					<div class="form-group" id="sms_code">
+						<input class="form-control" type="text" placeholder="1" value="">
+						<input class="form-control" type="text" placeholder="2" value="">
+						<input class="form-control" type="text" placeholder="3" value="">
+						<input class="form-control" type="text" placeholder="4" value="">
+						<input class="form-control" type="text" placeholder="5" value="">
+						<input class="form-control" type="text" placeholder="6" value="">
+					</div>
+					<button type="submit" class="btn btn-info">Login</button>
+				</form>
+				<form action="continue_submit" method="post" accept-charset="utf-8">
 					<div class="form-group">
 						<input type="text" name="phone-number" class="form-control" value="" placeholder="Enter your phone number">
 					</div>
