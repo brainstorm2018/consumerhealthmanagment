@@ -119,17 +119,17 @@ form {
 
 #sms_code input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: #fff;
-	opacity: .5;
+	opacity: .3;
 }
 /* Internet Explorer 10-11 */
 #sms_code input:-ms-input-placeholder {
 	color: #fff;
-	opacity: .5;
+	opacity: .3;
 }
 /* Microsoft Edge */
 #sms_code input::-ms-input-placeholder {
 	color: #fff;
-	opacity: .5;
+	opacity: .3;
 }
 
 .form-control:focus {
@@ -164,8 +164,27 @@ form {
 	box-shadow: 2px 3px #000;
 }
 
+@media only screen and (max-width: 768px) {
+	.enter-code,
+	.phone-message,
+	.login-via-phone {
+		text-align: center;
+	}
+}
+
 @media only screen and (max-width: 785px) {
 	.login-via-phone {
 		margin: .5rem 0;
+	}
+	.enter-code,
+	.phone-message {
+		margin: .5rem 0;
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+	#sms_code input {
+		margin-right: 0;
+		width: 30px;
 	}
 }
