@@ -1,0 +1,87 @@
+#login {
+	height: 100%;
+	background-color: #0c63ee;
+}
+
+.container {
+	text-align: center;
+	font-size: 12px;
+	padding-top: 20px;
+}
+
+#phrase-container img {
+	height: 100%;
+}
+
+#logo-container img {
+	width: 75px;
+}
+
+.login-gmail-container {
+	margin-top: 1rem;
+}
+
+.login {
+	padding-bottom: 5%;
+}
+
+.login-gmail,
+.login-phone {
+	margin: .5rem 0;
+}
+
+.login-gmail button,
+.login-phone button {
+	padding: 0;
+	border-color: none!important;
+}
+
+.btn-danger {
+	background-color: #f80c00!important;
+}
+
+.btn-success {
+	background-color: #0ff320!important;
+}
+
+.text-container {
+	margin: 0;
+	font-size: 13px;
+}
+
+.btn-danger .icon-container i {
+	font-size: 16px;
+	border-radius: inherit;
+	padding: .5rem;
+	background-color: #db4c3e;
+	border-color: #db4c3e;
+}
+
+
+.btn-danger .text-container {
+	background-color: #f80c00!important;
+	padding-right: 4rem;
+	padding-left: 3.63rem;
+}
+
+#or {
+	color: #d4d4d4;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.btn-success .icon-container i {
+	font-size: 26px;
+	width: 30px;
+	border-radius: inherit;
+	padding: .2rem .5rem;
+	background-color: #09d10e;
+	border-color: #09d10e;
+}
+
+.btn-success .text-container {
+	background-color: #0ff320!important;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	vertical-align: super;
+}
