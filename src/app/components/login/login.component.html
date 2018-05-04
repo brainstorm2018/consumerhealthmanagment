@@ -3,10 +3,10 @@
 		<div class="row">
 			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div id="logo-container">
-					<a href="#" *ngIf="!isLoginShow"  (click)="backEvent()" title="Back">
-						<i class="fa fa-arrow-left pull-left" aria-hidden="true"></i>
+					<a href="#" *ngIf="!isLoginShow" (click)="backEvent()" title="Back" class="pull-left">
+						<i class="fa fa-arrow-left" aria-hidden="true"></i>
 					</a>
-					<img src="../../../assets/images/logo.png" alt="logo"/>
+					<img src="{{logo}}" alt="logo"/>
 				</div>
 			</div>
 			<div class="offset-sm-3 col-sm-6 offset-md-4 col-md-4" id="login-via-number">
@@ -44,18 +44,18 @@
 			</div>
 			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div id="phrase-container">
-					<img src="../../../assets/images/phrase1.png" alt="login-phrase"/>
+					<img src="{{backgroundImage}}" alt="login-phrase"/>
 				</div>
 			</div>
 		</div>
 		<div class="row login" *ngIf="isLoginShow">
 			<div class="col-sm-12 offset-md-2 col-md-8 login-gmail-container">
 				<div class="login-gmail">
-					<button type="button" class="btn btn-danger">
+					<button type="submit" class="btn btn-danger" (click)="loginWithGmail()">
 						<span class="icon-container">
 							<i class="fa fa-google" aria-hidden="true" title="Login with gmail"></i>
 						</span>
-						<span class="text-container" (click)="loginWithGmail()"><b>Login with gmail</b></span>
+						<span class="text-container"><b>Login with gmail</b></span>
 					</button>
 				</div>
 			</div>
@@ -64,11 +64,11 @@
 			</div>
 			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div class="login-phone">
-					<button type="button" class="btn btn-success">
+					<button type="button" class="btn btn-success" (click)="loginWithGmail()">
 						<span class="icon-container">
 							<i class="fa fa-mobile" aria-hidden="true" title="Login via phone and OTP"></i>
 						</span>
-						<span class="text-container" (click)="loginWithGmail()"><b>Login via phone number and OTP</b></span>
+						<span class="text-container"><b>Login via phone number and OTP</b></span>
 					</button>
 				</div>
 			</div>

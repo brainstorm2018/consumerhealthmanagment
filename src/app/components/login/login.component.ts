@@ -7,17 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  logo = "../../../assets/images/logo.png";
+  backgroundImage = "../../../assets/images/phrase1.png";
+
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
   isEnterCodeShow = false
   constructor() { }
 
-  ngOnInit() {
-    this.isLoginShow = true;
-    this.isEnterPhoneNumberShow = false;
-    this.isEnterCodeShow = false
-  }
-
+  ngOnInit() {}
 
   loginWithGmail() {
     this.isLoginShow = false;
