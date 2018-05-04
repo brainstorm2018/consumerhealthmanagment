@@ -1,0 +1,31 @@
+section {
+	height: 100%;
+	background-color: #d4d4d4;
+}
+
+hr {
+	margin: .5rem 0;
+}
+
+.treatment-container {
+	background-color: blue;
+	border-radius: 10px;
+	margin: 2rem;
+	padding: .5rem;
+}
+
+.treatment {
+	background-color: #fff;
+	border-radius: 10px;
+	margin: 1rem;
+	padding: 1rem .5rem;
+}
+
+.treatment-title {
+	margin-bottom: 0!important;
+	line-height: 1;
+}
+
+.gender, .age {
+	font-weight: lighter;
+}

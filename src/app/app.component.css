@@ -1,18 +1,27 @@
 .sidenav {
+    /* styling css */
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #d4d4d4;
     overflow-x: hidden;
     transition: 0.5s;
+    /* bg image css */
+    background-image: url('../../src/assets/images/menu-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0c63ee;
+}
 
+.sidenav-container {
+    /* alignment css */
     justify-content: space-between;
     flex-direction: column;
     height: 100vh;
     display: flex;
+    background: linear-gradient( #fcfdffff, #ffffff88);
 }
 
 .sidenav .closebtn {
@@ -60,6 +69,10 @@
 
 .user-details {
     margin: .5rem;
+}
+
+.user-email a {
+    color: #00d0ff;
 }
 
 .container .logout {
