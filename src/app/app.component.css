@@ -1,0 +1,81 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #d4d4d4;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.user-info > div {
+    display: inline-flex;
+    color: #0c63ee;
+}
+
+.user-icon {
+    position: relative;
+    margin: .5rem;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #0c63ee;
+    border-radius: 50%;
+}
+
+.user-icon i {
+    font-size: 30px;
+    position: absolute;
+    bottom: 2px;
+    left: 6px;
+}
+
+.user-name {
+    margin: .5rem 0;
+    vertical-align: bottom;
+}
+
+.logo-container {
+    margin-top: .2rem;
+    margin-right: .5rem;
+}
+
+.logo-container img {
+    width: 50px;
+}
+
+.user-details {
+    margin: .5rem;
+}
+
+.container .logout {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.btn-primary {
+    border-radius: 50px;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

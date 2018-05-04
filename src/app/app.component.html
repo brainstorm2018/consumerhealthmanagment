@@ -1,20 +1,41 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="/">Login</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div id="sidenav" class="sidenav" style="width: 300px;">
+<!-- <a href="javascript:void(0)" class="closebtn" type="button" (click)="closeNav()">&times;</a> -->
+<!-- 	<ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+			<a class="nav-link" routerLink="/profile">Profile</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" routerLink="/question">Question</a>
+		</li>
+	</ul> -->
+	<section id="user_info">
+		<div class="user-info">
+			<div class="user-icon">
+				<i class="fa fa-user" aria-hidden="true"></i>
+			</div>
+			<div class="user-name">
+				<h5>Endrit Kane</h5>
+			</div>
+			<div class="logo-container pull-right">
+				<img src="{{logo}}" alt="logo"/>
+			</div>
+		</div>
+		<div class="user-details">
+			<div class="user-email">
+				<a href="mailto:krishinashetty000@gmail.com" title="krishinashetty000@gmail.com">krishinashetty000@gmail.com</a>
+			</div>
+			<div class="user-phone">
+				<span>+23657984546716</span>
+			</div>
+		</div>
+	</section>
+	<div class="logout">
+		<button type="submit" class="btn btn-primary pull-right">Logout</button>
+	</div>
+</div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+<span type="button" (click)="openNav()" style="font-size:30px;cursor:pointer;">&#9776;</span>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/profile">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/question">Question</a>
-      </li>
-    </ul>
-  </div>
-</nav> -->
-<router-outlet></router-outlet>
+<div class="container">
+	<router-outlet></router-outlet>
+</div>

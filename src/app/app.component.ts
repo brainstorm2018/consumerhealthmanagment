@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+	title = 'app';
+	logo = "../../../assets/images/logo.png";
+
+	openNav() {
+		document.getElementById("sidenav").style.width = "250px";
+	}
+
+	closeNav() {
+		document.getElementById("sidenav").style.width = "0";
+	}
+
 }
