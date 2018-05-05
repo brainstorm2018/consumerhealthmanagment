@@ -165,6 +165,22 @@ form {
 	box-shadow: 2px 3px #000;
 }
 
+@media only screen and (max-width: 340px) {
+	.btn-danger .text-container {
+		padding-left: 3.5rem;
+		font-size: 12px;
+		padding-right: 3.39rem;
+	}
+	.btn-success .text-container {
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	#phrase-container img {
+		width: 100%;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.enter-code,
 	.phone-message,
