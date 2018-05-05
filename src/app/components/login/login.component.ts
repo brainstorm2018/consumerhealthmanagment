@@ -1,5 +1,5 @@
+import { apConfig } from './../../../global';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  logo = "../../../assets/images/logo.png";
-  backgroundImage = "../../../assets/images/phrase1.png";
+  logo = apConfig.LOGO;
+  backgroundImage = apConfig.BACKGROUNDPHRASE;
 
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
