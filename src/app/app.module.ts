@@ -1,3 +1,4 @@
+import { MenutoggleService } from './services/menutoggle.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,7 +20,7 @@ import { routing } from './router/routing';
     BrowserModule,
     routing
   ],
-  providers: [],
+  providers: [MenutoggleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

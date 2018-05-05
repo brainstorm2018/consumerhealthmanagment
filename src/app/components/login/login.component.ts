@@ -1,12 +1,15 @@
 import { apConfig } from './../../../global';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
+export class LoginComponent implements OnInit {  
+  imageURL: string;
+  email: string;
+  name: string;
+  token: string;
   logo = apConfig.LOGO;
   backgroundImage = apConfig.BACKGROUNDPHRASE;
 
@@ -15,7 +18,7 @@ export class LoginComponent implements OnInit {
   isEnterCodeShow = false
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   loginWithGmail() {
     this.isLoginShow = false;
@@ -40,5 +43,4 @@ export class LoginComponent implements OnInit {
       this.isEnterCodeShow = false;
     }
   }
-
 }
