@@ -1,3 +1,4 @@
+import {  Router } from '@angular/router';
 import { apConfig } from './../../../global';
 import { Component, OnInit, NgZone, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 @Component({
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
   isEnterCodeShow = false
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() { }
 
@@ -31,7 +32,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-
+      this.router.navigate(['/profile']);
   }
 
   backEvent() {
