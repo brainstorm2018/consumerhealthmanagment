@@ -1,14 +1,5 @@
 <div id="sidenav" class="sidenav">
 	<div class="sidenav-container">
-	<!-- <a href="javascript:void(0)" class="closebtn" type="button" (click)="closeNav()">&times;</a> -->
-	<!-- 	<ul class="navbar-nav mr-auto">
-			<li class="nav-item">
-				<a class="nav-link" routerLink="/profile">Profile</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" routerLink="/question">Question</a>
-			</li>
-		</ul> -->
 		<section id="user_info">
 			<div class="user-info">
 				<div class="user-icon">
@@ -18,7 +9,9 @@
 					<h5>Endrit Kane</h5>
 				</div>
 				<div class="logo-container pull-right">
-					<img src="{{logo}}" alt="logo"/>
+					<a (click)="closeNav()">
+						<img src="{{logo}}" alt="logo"/>
+					</a>
 				</div>
 			</div>
 			<div class="user-details">
@@ -36,8 +29,6 @@
 	</div>
 </div>
 
-<!-- <span type="button" (click)="openNav()" style="font-size:30px;cursor:pointer;">&#9776;</span> -->
-
-<div class="container-fluid">
+<div class="container-fluid" id="main">
 	<router-outlet></router-outlet>
 </div>

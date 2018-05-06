@@ -1,3 +1,4 @@
+import { apConfig } from './../global';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,14 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'app';
-	logo = "../../../assets/images/logo.png";
-
-	openNav() {
-		document.getElementById("sidenav").style.width = "250px";
-	}
+	logo = apConfig.LOGO;
 
 	closeNav() {
 		document.getElementById("sidenav").style.width = "0";
 	}
-
 }

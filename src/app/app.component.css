@@ -63,7 +63,11 @@
     margin-right: .5rem;
 }
 
-.logo-container img {
+.logo-container > a {
+    cursor: pointer;
+}
+
+.logo-container > a > img {
     width: 50px;
 }
 
@@ -86,6 +90,12 @@
     margin-bottom: 1rem;
     padding-top: .1rem;
     padding-bottom: .1rem;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
 }
 
 @media screen and (max-height: 450px) {

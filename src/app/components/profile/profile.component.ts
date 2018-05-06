@@ -14,4 +14,8 @@ export class ProfileComponent implements OnInit {
 
 	logo = "../../../assets/images/logo.png";
 
+	openNav() {
+		document.getElementById("sidenav").style.width = "250px";
+	}
+
 }
