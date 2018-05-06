@@ -36,6 +36,7 @@
 .user-info {
     min-width: 250px;
     border-bottom: 1px solid #0c63ee;
+    padding-bottom: .5rem;
 }
 
 .user-info > div {
