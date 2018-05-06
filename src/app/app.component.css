@@ -13,6 +13,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #0c63ee;
+    transition: width 0.35s ease-in-out 0s;
 }
 
 .sidenav-container {
@@ -32,6 +33,11 @@
     margin-left: 50px;
 }
 
+.user-info {
+    min-width: 250px;
+    border-bottom: 1px solid #0c63ee;
+}
+
 .user-info > div {
     display: inline-flex;
     color: #0c63ee;
@@ -39,7 +45,7 @@
 
 .user-icon {
     position: relative;
-    margin: .5rem;
+    margin: .5rem .2rem .5rem .5rem;
     width: 35px;
     height: 35px;
     border: 1px solid #0c63ee;
