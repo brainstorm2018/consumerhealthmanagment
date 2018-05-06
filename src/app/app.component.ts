@@ -20,12 +20,12 @@ export class AppComponent implements OnInit, AfterViewInit {
 		this.menutoggleService.currentState.subscribe(menustate => {
 			this.menuState = menustate
 		});
-		console.log('this.menuState: ', this.menuState);
 	}
 
 	ngAfterViewInit() {
 		this.menutoggleService.currentState.subscribe((change)=>{
-			console.log('change: ', change);
+			if (change) this.openNav();
+			else this.closeNav();
 		});
 	}
 	openNav() {

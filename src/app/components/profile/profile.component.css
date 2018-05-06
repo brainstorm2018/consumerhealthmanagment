@@ -39,6 +39,8 @@ section {
 		border-bottom-right-radius: 10px;
 		box-shadow: 1px 1px #313131;
 		padding: 1.3rem 0 0 0;
+		cursor: pointer;
+		transition: .25s;
 	}
 
 	.user-icon {
@@ -49,17 +51,27 @@ section {
 		border: 1px solid #0c63ee;
 		border-radius: 50%;
 	}
-
-	.user-icon > a {
-		pointer-events: none;
+	.user-icon:hover {
+		background-color: #0c63ee;
+		transition: .25s;
+	}
+	.user-icon:hover > span > i {
+		color: #fff;
+		transition: .25s;
 	}
 
-	.user-icon > a > i {
-		color: #0c63ee;
-		font-size: 30px;
+	.user-icon > span {
 		position: absolute;
+		font-size: 30px;
 		bottom: 2px;
 		left: 6px;
+		height: 30px;
+	}
+
+	.user-icon > span > i {
+		color: #0c63ee;
+		vertical-align: super;
+		transition: .25s;
 	}
 /* End header */
 
