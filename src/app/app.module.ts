@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DetailsComponent } from './components/details/details.component';
+import { BloodPresureComponent } from './components/blood-presure/blood-presure.component';
 import { QuestionComponent } from './components/question/question.component';
 import { routing } from './router/routing';
 
@@ -16,7 +17,8 @@ import { routing } from './router/routing';
     LoginComponent,
     ProfileComponent,
     DetailsComponent,
-    QuestionComponent
+    QuestionComponent,
+    BloodPresureComponent
   ],
   imports: [
     BrowserModule,
