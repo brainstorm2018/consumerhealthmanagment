@@ -33,7 +33,7 @@
 						<input class="form-control" maxlength="1" type="text" placeholder="5" value="">
 						<input class="form-control" maxlength="1" type="text" placeholder="6" value="">
 					</div>
-					<button type="button" class="btn btn-info">Login</button>
+					<button (click)="submitLogin()" type="button" class="btn btn-info">Login</button>
 				</form>
 				<form *ngIf="isEnterPhoneNumberShow" action="continue_submit" method="post" accept-charset="utf-8">
 					<div class="form-group">
