@@ -12,19 +12,21 @@ const routes: Routes = [
     },
     {
         path: 'profile',
-        component: ProfileComponent,
-        // children: [
-        //   {
-        //   }
-        // ]
-    },
-    {
-        path: 'details',
-        component: DetailsComponent
+        children: [
+            {
+                path: '',
+                component: ProfileComponent,
+            },
+            {
+                path: 'details',
+                component: DetailsComponent,
+          }
+        ]
     },
     {
         path: 'question',
         component: QuestionComponent
-    }];
+    }
+];
 
 export const routing = RouterModule.forRoot(routes);

@@ -6,7 +6,7 @@ import { Component, OnInit, NgZone, ViewChild, ElementRef, AfterViewInit } from 
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {  
+export class LoginComponent implements OnInit {
   imageURL: string;
   email: string;
   name: string;
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
-  isEnterCodeShow = false
+  isEnterCodeShow = false;
   constructor(public router: Router) { }
 
   ngOnInit() { }

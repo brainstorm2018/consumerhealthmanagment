@@ -1,15 +1,16 @@
 import { MenutoggleService } from './../../services/menutoggle.service';
 import { Component, OnInit } from '@angular/core';
 import { apConfig } from './../../../global';
-import {  } from "../../services/menutoggle.service";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  
-  constructor(private menutoggleService: MenutoggleService) { }
+  logo = apConfig.LOGO;
+
+  constructor(private menutoggleService: MenutoggleService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -19,10 +20,8 @@ export class ProfileComponent implements OnInit {
     this.menutoggleService.toggle();
   }
 
-	logo = apConfig.LOGO;
-
-	openNav() {
-		document.getElementById("sidenav").style.width = "250px";
-	}
+  gotoDetails() {
+      this.router.navigate(['profile/details']);
+  }
 
 }
