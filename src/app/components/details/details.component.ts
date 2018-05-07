@@ -12,4 +12,8 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  goToBloodPresure() {
+    this.router.navigate(['profile/details/blood-presure']);
+  }
 }
