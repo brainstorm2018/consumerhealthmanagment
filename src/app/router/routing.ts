@@ -28,15 +28,15 @@ const routes: Routes = [
                     {
                         path: 'blood-presure',
                         component: BloodPresureComponent,
+                    },
+                    {
+                        path: 'questions',
+                        component: QuestionComponent
                     }
             ]
             }
         ]
     },
-    {
-        path: 'question',
-        component: QuestionComponent
-    }
 ];
 
 export const routing = RouterModule.forRoot(routes);

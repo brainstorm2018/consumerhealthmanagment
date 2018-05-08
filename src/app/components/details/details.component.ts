@@ -16,4 +16,7 @@ export class DetailsComponent implements OnInit {
   goToBloodPresure() {
     this.router.navigate(['profile/details/blood-presure']);
   }
+  goToQuestionsList() {
+    this.router.navigate(['profile/details/questions']);
+  }
 }
