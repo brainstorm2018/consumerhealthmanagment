@@ -6,7 +6,7 @@
 					<!-- Header  -->
 					<div class="treatment-details">
 						<div class="title">
-							<a routerLink='/profile' title="Back" class="pull-left back-arrow">
+							<a  routerLink='/profile/details' title="Back" class="pull-left back-arrow">
 								<i class="fa fa-arrow-left" aria-hidden="true"></i>
 							</a>
 							<h5>Hypertension Managment</h5>
@@ -33,14 +33,14 @@
 								<form action="" method="post" accept-charset="utf-8">
 									<div class="answer">
 										<!-- Radio Buttons Page1-->
-										<div class="form-check">
+										<div *ngIf="firstQuestion"  class="form-check">
 											<label>
 												<input type="radio" name="radio" checked>
 												<span class="label-text">Yes</span>
 											</label>
 											<span class="line"></span>
 										</div>
-										<div class="form-check">
+										<div *ngIf="firstQuestion" class="form-check">
 											<label>
 												<input type="radio" name="radio">
 												<span class="label-text">No</span>
@@ -48,25 +48,25 @@
 										</div>
 
 										<!-- Checkboxes Page2-->
-										<div class="form-check">
+										<div *ngIf="secondQuestion"  class="form-check">
 											<label>
 												<input type="checkbox" name="check" checked>
 												<span class="label-text">Head</span>
 											</label>
 										</div>
-										<div class="form-check">
+										<div *ngIf="secondQuestion" class="form-check">
 											<label>
 												<input type="checkbox" name="check" checked>
 												<span class="label-text">Back</span>
 											</label>
 										</div>
-										<div class="form-check">
+										<div *ngIf="secondQuestion" class="form-check">
 											<label>
 												<input type="checkbox" name="check">
 												<span class="label-text">Body</span>
 											</label>
 										</div>
-										<div class="form-check">
+										<div *ngIf="secondQuestion" class="form-check">
 											<label>
 												<input type="checkbox" name="check">
 												<span class="label-text">Legs</span>
@@ -74,26 +74,26 @@
 										</div>
 
 										<!-- Page 3 -->
-										<div class="form-group" id="diseases">
+										<div *ngIf="thirdQuestion"  class="form-group" id="diseases">
 											<input type="text" name="disease" class="form-control">
 										</div>
 
 										<!-- Radio Buttons Page4-->
-										<div class="form-check">
+										<div *ngIf="fourthQuestion"  class="form-check">
 											<label>
 												<input type="radio" name="radio" checked>
 												<span class="label-text">From today</span>
 											</label>
 											<span class="line"></span>
 										</div>
-										<div class="form-check">
+										<div *ngIf="fourthQuestion" class="form-check">
 											<label>
 												<input type="radio" name="radio">
 												<span class="label-text">Week</span>
 											</label>
 											<span class="line"></span>
 										</div>
-										<div class="form-check">
+										<div *ngIf="fourthQuestion" class="form-check">
 											<label>
 												<input type="radio" name="radio">
 												<span class="label-text">Month</span>
@@ -101,7 +101,7 @@
 										</div>
 
 										<!-- Radio Buttons Page5-->
-										<div class="form-check">
+										<div *ngIf="fivethQuestion"  class="form-check">
 											<label>
 												<input type="radio" name="radio" checked>
 												<span class="label-text">From today</span>
@@ -111,21 +111,21 @@
 											</div>
 											<span class="line"></span>
 										</div>
-										<div class="form-check">
+										<div *ngIf="fivethQuestion" class="form-check">
 											<label>
 												<input type="radio" name="radio">
 												<span class="label-text">Week</span>
 											</label>
 											<span class="line"></span>
 										</div>
-										<div class="form-check">
+										<div *ngIf="fivethQuestion" class="form-check">
 											<label>
 												<input type="radio" name="radio">
 												<span class="label-text">Month</span>
 											</label>
 											<span class="line"></span>
 										</div>
-										<div class="form-check">
+										<div *ngIf="fivethQuestion" class="form-check">
 											<label>
 												<input type="radio" name="radio">
 												<span class="label-text">Couple of months</span>
@@ -138,7 +138,8 @@
 										<!-- <button type="button" class="btn btn-info pull-left">Previous</button> -->
 										<!-- for page 3 -->
 
-										<button type="button" class="btn btn-info">Skip</button>
+										<button  *ngIf="!firstQuestion" type="button" class="back btn btn-info" (click)="unduQuestion()">Back</button>
+										<button type="button" class="btn btn-info" (click)="goToNext()">Skip</button>
 										<!-- <button type="button" class="btn btn-info">Next</button> -->
 
 										<!-- for last page -->

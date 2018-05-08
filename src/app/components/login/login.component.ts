@@ -1,4 +1,4 @@
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { apConfig } from './../../../global';
 import { Component, OnInit, NgZone, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { AuthenticationService } from '../../services/login/login.service';
@@ -18,12 +18,14 @@ export class LoginComponent implements OnInit {
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
   isEnterCodeShow = false;
-  constructor(public router: Router, public authenticationService: AuthenticationService) { }
+  constructor(public router: Router
+              // public authenticationService: AuthenticationService
+            ) { }
 
   ngOnInit() { }
 
   loginWithGmail() {
-    this.authenticationService.login();
+    // this.authenticationService.login();
   }
 
   loginWithPhone() {
@@ -37,7 +39,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-      this.router.navigate(['/profile']);
+    this.router.navigate(['/profile']);
   }
 
   backEvent() {

@@ -109,6 +109,10 @@
 	.skip-next-btn button:hover {
 		opacity: .7;
 	}
+	.back{
+		text-align: left;
+		
+	}
 /* End Container */
 
 

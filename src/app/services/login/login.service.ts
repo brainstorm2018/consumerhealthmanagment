@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { filter } from 'rxjs/operators';
-import * as auth0 from 'auth0-js';
+import { auth0 } from 'auth0-js';
 import { Router } from '@angular/router';
 
 @Injectable()
