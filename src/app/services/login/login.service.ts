@@ -1,9 +1,8 @@
 import { apConfig } from './../../../global';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { filter } from 'rxjs/operators';
-import { auth0 } from 'auth0-js';
+import * as auth0 from 'auth0-js';
 import { Router } from '@angular/router';
 
 @Injectable()
@@ -14,13 +13,13 @@ export class AuthenticationService {
     domain: 'bss2018.eu.auth0.com',
     responseType: 'token id_token',
     audience: 'https://bss2018.eu.auth0.com/userinfo',
-    redirectUri: 'http://localhost:3000/callback',
+    redirectUri: 'http://localhost:4200/callback',
     scope: 'openid'
   });
 
   private apiLoginUrl = apConfig.API_ENDPOINT_URL + '/login';
 
-  constructor(private http: HttpClient, public router: Router) {}
+  constructor(public router: Router) {}
 
 
   public login(): void {
@@ -30,11 +29,11 @@ export class AuthenticationService {
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
+        // window.location.hash = '';
         this.setSession(authResult);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/profile']);
       } else if (err) {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
         console.log(err);
       }
     });

@@ -12,6 +12,9 @@ const routes: Routes = [
         component: LoginComponent
     },
     {
+        path: 'callback', redirectTo: 'profile'
+    },
+    {
         path: 'profile',
         children: [
             {

@@ -18,14 +18,14 @@ export class LoginComponent implements OnInit {
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
   isEnterCodeShow = false;
-  constructor(public router: Router
-              // public authenticationService: AuthenticationService
+  constructor(public router: Router,
+              public authenticationService: AuthenticationService
             ) { }
 
   ngOnInit() { }
 
   loginWithGmail() {
-    // this.authenticationService.login();
+    this.authenticationService.login();
   }
 
   loginWithPhone() {
