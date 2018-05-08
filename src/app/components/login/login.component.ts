@@ -1,6 +1,10 @@
 import {  Router } from '@angular/router';
 import { apConfig } from './../../../global';
 import { Component, OnInit, NgZone, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import {
+  AuthService,
+  GoogleLoginProvider
+} from 'angular5-social-login';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,11 +21,22 @@ export class LoginComponent implements OnInit {
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
   isEnterCodeShow = false;
-  constructor(public router: Router) { }
+  constructor(public router: Router, private socialAuthService: AuthService ) { }
 
   ngOnInit() { }
 
   loginWithGmail() {
+    const socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData) => {
+        console.log( userData);
+
+      }
+    );
+  }
+
+  loginWithPhone() {
     this.isLoginShow = false;
     this.isEnterPhoneNumberShow = true;
   }

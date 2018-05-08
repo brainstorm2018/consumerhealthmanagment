@@ -10,6 +10,25 @@ import { DetailsComponent } from './components/details/details.component';
 import { BloodPresureComponent } from './components/blood-presure/blood-presure.component';
 import { QuestionComponent } from './components/question/question.component';
 import { routing } from './router/routing';
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from 'angular5-social-login';
+
+export function getAuthServiceConfigs() {
+  const config = new AuthServiceConfig(
+      [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider('878271741260-drh5llrqetvk9dg6uefm6poluc0qi609.apps.googleusercontent.com')
+        },
+      ]
+  );
+  return config;
+}
+
 
 @NgModule({
   declarations: [
@@ -22,9 +41,16 @@ import { routing } from './router/routing';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    SocialLoginModule
   ],
-  providers: [MenutoggleService],
+  providers: [
+    MenutoggleService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
