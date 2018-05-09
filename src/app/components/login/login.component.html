@@ -19,7 +19,7 @@
 					</p>
 				</div>
 				<div class="login-via-phone" *ngIf="isEnterPhoneNumberShow || isEnterCodeShow" >
-					<span>true
+					<span>
 						<i class="fa fa-mobile" aria-hidden="true"></i>
 						Login via phone number and OTP
 					</span>
@@ -39,7 +39,7 @@
 					<div class="form-group">
 						<input type="text" name="phone-number" class="form-control" value="" placeholder="Enter your phone number">
 					</div>
-					<button type="submit" class="btn btn-info" (click)="submitPhoneNumber()">Continue</button>
+					<button type="button" class="btn btn-info" (click)="submitPhoneNumber()">Continue</button>
 				</form>
 			</div>
 			<div class="col-sm-12 offset-md-2 col-md-8">
@@ -51,7 +51,7 @@
 		<div class="row login" *ngIf="isLoginShow">
 			<div class="col-sm-12 offset-md-2 col-md-8 login-gmail-container">
 				<div class="login-gmail">
-					<button type="submit" class="btn btn-danger" (click)="loginWithGmail()">
+					<button type="button" class="btn btn-danger" (click)="loginWithGmail()">
 						<span class="icon-container">
 							<i class="fa fa-google" aria-hidden="true" title="Login with gmail"></i>
 						</span>

@@ -5,7 +5,7 @@
 }
 
 .bg-content {
-	background-image: url('assets/images/bg.png');
+	background-image: url('/assets/images/bg.png');
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;

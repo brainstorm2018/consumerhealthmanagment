@@ -5,7 +5,7 @@ section {
 }
 
 .bg-content {
-	background-image: url('assets/images/profile-bg.png');
+	background-image: url('/assets/images/profile-bg.png');
 	background-size: cover;
 	background-position: initial;
 	background-repeat: no-repeat;
