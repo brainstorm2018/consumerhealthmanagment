@@ -9,7 +9,7 @@
 					<h6>Krishina ketty</h6>
 				</div>
 				<div class="logo-container pull-right">
-					<a (click)="closeNav()">
+					<a (click)="menutoggleService.toggle()">
 						<img src="{{logo}}" alt="logo"/>
 					</a>
 				</div>
@@ -24,7 +24,7 @@
 			</div>
 		</section>
 		<div class="logout">
-			<button type="submit" class="btn btn-primary pull-right">Logout</button>
+			<button type="button" (click)="logOut()" class="btn btn-primary pull-right">Logout</button>
 		</div>
 	</div>
 </div>

@@ -1,11 +1,18 @@
-import { Router } from '@angular/router';
-import { apConfig } from './../../../global';
-import { Component, OnInit, NgZone, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { AuthenticationService } from '../../services/login/login.service';
+import { Router } from "@angular/router";
+import { apConfig } from "./../../../global";
+import {
+  Component,
+  OnInit,
+  NgZone,
+  ViewChild,
+  ElementRef,
+  AfterViewInit
+} from "@angular/core";
+import { AuthenticationService } from "../../services/login/login.service";
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
   imageURL: string;
@@ -18,13 +25,21 @@ export class LoginComponent implements OnInit {
   isLoginShow = true;
   isEnterPhoneNumberShow = false;
   isEnterCodeShow = false;
-  constructor(public router: Router,
-              public authenticationService: AuthenticationService
-            ) { }
+  constructor(
+    public router: Router,
+    public authenticationService: AuthenticationService
+  ) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    if (this.authenticationService.isAuthenticated()) {
+        this.router.navigate(['/profile']);
+    }
+    this.authenticationService.handleAuthentication();
+  }
+
 
   loginWithGmail() {
+    // this.authenticationService.login();
     this.authenticationService.login();
   }
 
@@ -39,7 +54,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-    this.router.navigate(['/profile']);
+    this.router.navigate(["/profile"]);
   }
 
   backEvent() {

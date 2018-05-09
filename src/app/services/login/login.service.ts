@@ -13,7 +13,7 @@ export class AuthenticationService {
     domain: 'bss2018.eu.auth0.com',
     responseType: 'token id_token',
     audience: 'https://bss2018.eu.auth0.com/userinfo',
-    redirectUri: 'http://localhost:4200/callback',
+    redirectUri: 'http://localhost:4200',
     scope: 'openid'
   });
 
@@ -29,11 +29,12 @@ export class AuthenticationService {
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        // window.location.hash = '';
+        window.location.hash = '';
+        console.log('authResult: ', authResult);
         this.setSession(authResult);
         this.router.navigate(['/profile']);
       } else if (err) {
-        this.router.navigate(['/']);
+        this.router.navigate(['/profile']);
         console.log(err);
       }
     });
@@ -45,6 +46,7 @@ export class AuthenticationService {
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
+    console.log('Does Code Goes Here');
   }
 
   public logout(): void {
