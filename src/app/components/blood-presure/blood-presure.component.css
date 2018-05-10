@@ -60,6 +60,17 @@
 	.bp-container > div {
 		padding: .5rem 1rem;
 		margin: 1rem  0;
+		position: relative;
+	}
+	.bp-container > div a {
+		cursor: pointer;
+		color: #007bff;
+		text-decoration: none;
+		background-color: transparent;
+	}
+	.bp-container > div a:hover {
+		color: #0056b3;
+		text-decoration: underline;
 	}
 	.bp-container > div:not(:last-child) {
 		border: 1px solid #0c63ee;
@@ -91,3 +102,6 @@
 		opacity: .7;
 	}
 /* End Container */
+
+
+/* Calendar */

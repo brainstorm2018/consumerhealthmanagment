@@ -105,6 +105,12 @@ form {
 #login-via-number button {
 	border-radius: 50px;
 }
+#login-via-number input {
+	box-shadow: 2px 3px #000;
+}
+#login-via-number input:focus {
+	box-shadow: 2px 3px blue;
+}
 
 #sms_code input {
 	display: initial;
