@@ -47,15 +47,23 @@ section {
 
 .btn-danger {
 	background-color: #f80c00!important;
+	border-left: 0;
 }
 
 .btn-success {
 	background-color: #0ff320!important;
+	border-left: 0;
+}
+
+.icon-container {
+	float: left;
 }
 
 .text-container {
 	margin: 0;
 	font-size: 13px;
+	vertical-align: -webkit-baseline-middle;
+	vertical-align: -moz-middle-with-baseline;
 }
 
 .btn-danger .icon-container i {
@@ -66,11 +74,12 @@ section {
 	border-color: #db4c3e;
 }
 
-
 .btn-danger .text-container {
 	background-color: #f80c00!important;
-	padding-right: 3.68rem;
-	padding-left: 3.63rem;
+	padding-right: 3.82rem;
+	padding-left: 3.8rem;
+	-webkit-padding-end: 4rem; /* right */
+	-webkit-padding-start: 3.6rem; /*left*/
 }
 
 #or {
@@ -92,7 +101,6 @@ section {
 	background-color: #0ff320!important;
 	padding-left: .5rem;
 	padding-right: .5rem;
-	vertical-align: super;
 }
 
 #login-via-number,
@@ -105,10 +113,10 @@ form {
 #login-via-number button {
 	border-radius: 50px;
 }
-#login-via-number input {
+#login-via-number > input {
 	box-shadow: 2px 3px #000;
 }
-#login-via-number input:focus {
+#login-via-number > input:focus {
 	box-shadow: 2px 3px blue;
 }
 

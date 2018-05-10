@@ -35,30 +35,24 @@
 						<div class="bp-container">
 							<div class="date">
 								<span>Date</span>
-								<a href="#" title="Date" class="pull-right">30-Apr-2018</a>
-								<input class="form-control" placeholder="yyyy-mm-dd"
-								   name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-							<div class="input-group-append">
-							  <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
-								<img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
-							  </button>
-							</div>
+								<a title="Date" class="pull-right" (click)="d.toggle()">30-Apr-2018</a>
+								<input type="hidden" class="form-control" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
 							</div>
 							<div class="time">
 								<span>Time</span>
-								<a href="#" title="Time" class="pull-right">PM 11:50</a>
+								<a title="Time" class="pull-right">PM 11:50</a>
 							</div>
 							<div class="systolic">
 								<span>Systolic</span>
-								<a href="#" title="Systolic" class="pull-right">120 mmHg</a>
+								<a title="Systolic" class="pull-right">120 mmHg</a>
 							</div>
 							<div class="diastolic">
 								<span>Diastolic</span>
-								<a href="#" title="Diastolic" class="pull-right">80 mmHg</a>
+								<a title="Diastolic" class="pull-right">80 mmHg</a>
 							</div>
 							<div class="pulse">
 								<span>Pulse Rearings</span>
-								<a href="#" title="Pulse" class="pull-right">80 Beats/Min</a>
+								<a title="Pulse" class="pull-right">80 Beats/Min</a>
 							</div>
 							<div class="notes">
 								<textarea class="form-control" rows="5" name="notes" placeholder="Add notes..."></textarea>
