@@ -11,7 +11,8 @@ import { DetailsComponent } from './components/details/details.component';
 import { BloodPresureComponent } from './components/blood-presure/blood-presure.component';
 import { QuestionComponent } from './components/question/question.component';
 import { routing } from './router/routing';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +23,10 @@ import { routing } from './router/routing';
     BloodPresureComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [
     MenutoggleService,

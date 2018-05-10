@@ -17,11 +17,32 @@
 						</div>
 					</div>
 					<!-- Content -->
+
+					<!-- <form class="form-inline">
+						<div class="form-group">
+						  <div class="input-group">
+							<input class="form-control" placeholder="yyyy-mm-dd"
+								   name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+							<div class="input-group-append">
+							  <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+								<img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+							  </button>
+							</div>
+						  </div>
+						</div>
+					  </form> -->
 					<div class="details-bg">
 						<div class="bp-container">
 							<div class="date">
 								<span>Date</span>
 								<a href="#" title="Date" class="pull-right">30-Apr-2018</a>
+								<input class="form-control" placeholder="yyyy-mm-dd"
+								   name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+							<div class="input-group-append">
+							  <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+								<img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+							  </button>
+							</div>
 							</div>
 							<div class="time">
 								<span>Time</span>

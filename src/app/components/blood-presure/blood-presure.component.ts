@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blood-presure.component.css']
 })
 export class BloodPresureComponent implements OnInit {
-
+  model;
   constructor() { }
 
   ngOnInit() {
