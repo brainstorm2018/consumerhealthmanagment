@@ -143,7 +143,7 @@ hr {
 		word-wrap:break-word;
 	}
 
-	@-moz-document url-prefix() {
+/*	@-moz-document url-prefix() {
 		.doctor-message p:before {
 			background: #FFFFFF;
 			bottom: 0;
@@ -162,7 +162,7 @@ hr {
 			width: 100%;
 			z-index: 1;
 		}
-	}
+	}*/
 
 	.timestamp {
 		margin-right: .5rem;
