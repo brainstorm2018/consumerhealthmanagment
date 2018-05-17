@@ -8,8 +8,8 @@ export class HeaderService {
 
   setHeader() {
     let myHeaders = new Headers();
-    myHeaders.append('Content-Type', 'application/json');
-    myHeaders.append('Token', this.token);
+    myHeaders.append('Content-Type', ' application/x-www-form-urlencoded');
+    // myHeaders.append('Token', this.token);
     let myParams = new URLSearchParams();
     let options = new RequestOptions({ headers: myHeaders, params: myParams });
 

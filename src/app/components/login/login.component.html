@@ -6,19 +6,19 @@
 					<a href="#" *ngIf="!isLoginShow" (click)="backEvent()" title="Back" class="pull-left">
 						<i class="fa fa-arrow-left" aria-hidden="true"></i>
 					</a>
-					<img src="{{logo}}" alt="logo"/>
+					<img src="{{logo}}" alt="logo" />
 				</div>
 			</div>
 			<div class="offset-sm-3 col-sm-6 offset-md-4 col-md-4" id="login-via-number">
-				<div class="enter-code" *ngIf="isEnterCodeShow" >
+				<div class="enter-code" *ngIf="isEnterCodeShow">
 					<h5>Enter Code</h5>
 				</div>
-				<div class="phone-message" *ngIf="isEnterCodeShow" >
-					<p>We have send you an SMS on +23948528352<br/>
-						with 6-digit verification code (OTP).
+				<div class="phone-message" *ngIf="isEnterCodeShow">
+					<p>We have send you an SMS on +23948528352
+						<br/> with 6-digit verification code (OTP).
 					</p>
 				</div>
-				<div class="login-via-phone" *ngIf="isEnterPhoneNumberShow || isEnterCodeShow" >
+				<div class="login-via-phone" *ngIf="isEnterPhoneNumberShow || isEnterCodeShow">
 					<span>
 						<i class="fa fa-mobile" aria-hidden="true"></i>
 						Login via phone number and OTP
@@ -44,19 +44,28 @@
 			</div>
 			<div class="col-sm-12 offset-md-2 col-md-8">
 				<div id="phrase-container">
-					<img src="{{backgroundImage}}" alt="login-phrase"/>
+					<img src="{{backgroundImage}}" alt="login-phrase" />
 				</div>
 			</div>
 		</div>
 		<div class="row login" *ngIf="isLoginShow">
 			<div class="col-sm-12 offset-md-2 col-md-8 login-gmail-container">
 				<div class="login-gmail">
-					<button type="button" class="btn btn-danger" (click)="loginWithGmail()">
-						<span class="icon-container">
-							<i class="fa fa-google" aria-hidden="true" title="Login with gmail"></i>
-						</span>
-						<span class="text-container"><b>Login with gmail</b></span>
-					</button>
+
+					<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+						<!-- <input name="scope" ngModel required #first="ngModel"> -->
+						<input ngModel type="hidden" name="scope">
+						<button type="submit" class="btn btn-danger">
+								<span class="icon-container">
+									<i class="fa fa-google" aria-hidden="true" title="Login with gmail"></i>
+								</span>
+								<span class="text-container">
+									<b>Login with gmail</b>
+								</span>
+							</button>
+					</form>
+
+
 				</div>
 			</div>
 			<div class="col-sm-12 offset-md-2 col-md-8">
@@ -68,7 +77,9 @@
 						<span class="icon-container">
 							<i class="fa fa-mobile" aria-hidden="true" title="Login via phone and OTP"></i>
 						</span>
-						<span class="text-container"><b>Login via phone number and OTP</b></span>
+						<span class="text-container">
+							<b>Login via phone number and OTP</b>
+						</span>
 					</button>
 				</div>
 			</div>

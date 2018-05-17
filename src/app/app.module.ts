@@ -1,3 +1,4 @@
+import { HeaderService } from './services/header/header.service';
 import { AuthenticationService } from './services/login/login.service';
 import { MenutoggleService } from './services/menutoggle.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +14,7 @@ import { QuestionComponent } from './components/question/question.component';
 import { routing } from './router/routing';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,13 +26,15 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     NgbModule.forRoot(),
+    HttpModule,
     BrowserModule,
     routing,
     FormsModule
   ],
   providers: [
     MenutoggleService,
-    AuthenticationService
+    AuthenticationService,
+    HeaderService
   ],
   bootstrap: [AppComponent]
 })

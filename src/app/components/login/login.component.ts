@@ -1,3 +1,4 @@
+import { HeaderService } from './../../services/header/header.service';
 import { Router } from "@angular/router";
 import { apConfig } from "./../../../global";
 import {
@@ -9,6 +10,8 @@ import {
   AfterViewInit
 } from "@angular/core";
 import { AuthenticationService } from "../../services/login/login.service";
+import { NgForm } from '@angular/forms';
+import { Http } from '@angular/http';
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -27,12 +30,14 @@ export class LoginComponent implements OnInit {
   isEnterCodeShow = false;
   constructor(
     public router: Router,
-    public authenticationService: AuthenticationService
-  ) {}
+    public authenticationService: AuthenticationService,
+    private headerService: HeaderService,
+    private http: Http
+  ) { }
 
   ngOnInit() {
     if (this.authenticationService.isAuthenticated()) {
-        this.router.navigate(['/profile']);
+      this.router.navigate(['/profile']);
     }
     this.authenticationService.handleAuthentication();
   }
@@ -65,5 +70,14 @@ export class LoginComponent implements OnInit {
       this.isEnterPhoneNumberShow = true;
       this.isEnterCodeShow = false;
     }
+  }
+
+
+  onSubmit(f: NgForm) {
+    f.value.scope="https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    let body = JSON.stringify(f.value);
+    return this.http
+      .post('http://206.189.143.10:8080/signin/google', body, this.headerService.setHeader())
+      .subscribe();
   }
 }
