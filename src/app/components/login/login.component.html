@@ -52,17 +52,16 @@
 			<div class="col-sm-12 offset-md-2 col-md-8 login-gmail-container">
 				<div class="login-gmail">
 
-					<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-						<!-- <input name="scope" ngModel required #first="ngModel"> -->
-						<input ngModel type="hidden" name="scope">
-						<button type="submit" class="btn btn-danger">
+					<form action="http://206.189.143.10:8080/signin/google" target="_blank" method="POST" #form>
+						<input  name="scope" value="https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"  required type="hidden">
+						<button type="submit" class="btn btn-danger" (click)="form.submit()">
 								<span class="icon-container">
-									<i class="fa fa-google" aria-hidden="true" title="Login with gmail"></i>
-								</span>
-								<span class="text-container">
-									<b>Login with gmail</b>
-								</span>
-							</button>
+										<i class="fa fa-google" aria-hidden="true" title="Login with gmail"></i>
+									</span>
+									<span class="text-container">
+										<b>Login with gmail</b>
+									</span>
+						</button>
 					</form>
 
 
