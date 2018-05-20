@@ -74,10 +74,16 @@ export class LoginComponent implements OnInit {
 
 
   onSubmit(f: NgForm) {
-    f.value.scope="https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+    f.value.scope = "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
     let body = JSON.stringify(f.value);
     return this.http
-      .post('http://206.189.143.10:8080/signin/google', body, this.headerService.setHeader())
-      .subscribe();
+      .post('http://206.189.143.10:8080/signin/google', body, this.headerService.setHeader()).map(res => res.json()).subscribe(
+        data => {
+          console.log("data", data);
+        },
+        error => {
+          console.log("error", error.json());
+        }
+      );
   }
 }
