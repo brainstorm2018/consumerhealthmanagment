@@ -2,23 +2,23 @@ import { HeaderService } from './../header/header.service';
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { User } from '../../interfaces/user';
+import { apConfig } from '../../../global';
 
 @Injectable()
 export class ProfileService {
 
   constructor(private http: Http, private header: HeaderService) { }
 
-
   postUser(user: User) {
-    let body = JSON.stringify(user);
+   const body = JSON.stringify(user);
    return this.http
-    .post('api', body, this.header.setHeader())
+    .post(apConfig.API_ENDPOINT_URL, body, this.header.setHeaderWithToken())
     .map(res => res.json());
   }
 
   getUsers() {
     return this.http
-    .get('api', this.header.setHeader())
+    .get(apConfig.API_ENDPOINT_URL, this.header.setHeaderWithToken())
     .map(res => res.json());
   }
 }

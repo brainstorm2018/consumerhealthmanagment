@@ -7,14 +7,20 @@ export class HeaderService {
   constructor() { }
 
   setHeader() {
-    let myHeaders = new Headers();
-    myHeaders.append('Access-Control-Allow-Origin','*');
-    // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
+    const myHeaders = new Headers();
+    myHeaders.append('Access-Control-Allow-Origin', '*');
     myHeaders.append('Content-Type', 'application/json');
-    // myHeaders.append('Token', this.token);
-    let myParams = new URLSearchParams();
-    let options = new RequestOptions({ headers: myHeaders, params: myParams });
+    const myParams = new URLSearchParams();
+    const options = new RequestOptions({ headers: myHeaders, params: myParams });
+    return options;
+  }
 
+  setHeaderWithToken() {
+    const myHeaders = new Headers();
+    myHeaders.append('Access-Control-Allow-Origin', '*');
+    myHeaders.append('Token', this.token);
+    const myParams = new URLSearchParams();
+    const options = new RequestOptions({ headers: myHeaders, params: myParams });
     return options;
   }
 }

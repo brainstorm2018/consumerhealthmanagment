@@ -13,6 +13,7 @@ export class ProfileComponent implements OnInit {
   constructor(private menutoggleService: MenutoggleService, private router: Router) { }
 
   ngOnInit() {
+
   }
 
 
