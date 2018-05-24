@@ -1,4 +1,4 @@
-export interface User {
+export interface Service {
     title: number,
     description: string,
     categoryId: string,

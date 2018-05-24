@@ -16,7 +16,7 @@ import { routing } from './router/routing';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { CookieService, CookieBackendService } from 'ngx-cookie';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +38,7 @@ import { HttpModule } from '@angular/http';
     AuthenticationService,
     HeaderService,
     ProfileService,
+    // { provide: CookieService, useClass: CookieBackendService }  
   ],
   bootstrap: [AppComponent]
 })

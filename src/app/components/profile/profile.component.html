@@ -16,12 +16,12 @@
 					</div>
 				</div>
 				<div class="treatment-container">
-					<div *ngFor="let item of user" (click)="gotoDetails()" class="treatment">
+					<div *ngFor="let item of service" (click)="gotoDetails()" class="treatment">
 						<h5 class="treatment-title">Hypertension Managment</h5>
 						<span class="patient-info">
-							<small class="user">for Ventaka N, </small>
-							<small class="gender">male </small>
-							<small class="age"><i>41</i> years</small>
+							<small class="user">for {{item.planFor.name}}</small>
+							<small class="gender">{{item.planFor.gender}} </small>
+							<small class="age"><i>{{ 2018 - (item.planFor.birthDate | date:'yyyy')}}</i> years</small>
 						</span>
 						<hr>
 						<div class="treatment-cure">
