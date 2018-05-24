@@ -32,14 +32,15 @@ export class LoginComponent implements OnInit {
     public router: Router,
     public authenticationService: AuthenticationService,
     private headerService: HeaderService,
-    private http: Http
+    private http: Http,
   ) { }
 
   ngOnInit() {
-    if (this.authenticationService.isAuthenticated()) {
+    localStorage.setItem('authenticationToken', 'something');
+
+    if (localStorage.getItem('authenticationToken')!==null) {
       this.router.navigate(['/profile']);
     }
-    this.authenticationService.handleAuthentication();
   }
 
 

@@ -12,13 +12,13 @@ export class ProfileService {
   postUser(user: User) {
    const body = JSON.stringify(user);
    return this.http
-    .post(apConfig.API_ENDPOINT_URL, body, this.header.setHeaderWithToken())
+    .post(apConfig.API_ENDPOINT_URL + '/api/service', body, this.header.setHeaderWithToken())
     .map(res => res.json());
   }
 
   getUsers() {
     return this.http
-    .get(apConfig.API_ENDPOINT_URL, this.header.setHeaderWithToken())
+    .get(apConfig.API_ENDPOINT_URL + '/api/service', this.header.setHeaderWithToken())
     .map(res => res.json());
   }
 }

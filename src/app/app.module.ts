@@ -1,3 +1,4 @@
+import { ProfileService } from './services/profile/profile.service';
 import { HeaderService } from './services/header/header.service';
 import { AuthenticationService } from './services/login/login.service';
 import { MenutoggleService } from './services/menutoggle.service';
@@ -15,6 +16,7 @@ import { routing } from './router/routing';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { HttpModule } from '@angular/http';
   providers: [
     MenutoggleService,
     AuthenticationService,
-    HeaderService
+    HeaderService,
+    ProfileService,
   ],
   bootstrap: [AppComponent]
 })

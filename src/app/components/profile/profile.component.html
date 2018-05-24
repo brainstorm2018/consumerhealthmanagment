@@ -16,7 +16,7 @@
 					</div>
 				</div>
 				<div class="treatment-container">
-					<div *ngFor="let i of [0,1,2,3,4, 5, 6, 7, 8, 9, 10]" (click)="gotoDetails()" class="treatment">
+					<div *ngFor="let item of user" (click)="gotoDetails()" class="treatment">
 						<h5 class="treatment-title">Hypertension Managment</h5>
 						<span class="patient-info">
 							<small class="user">for Ventaka N, </small>
@@ -27,8 +27,7 @@
 						<div class="treatment-cure">
 							<h5 class="doctor-name">Dr Varghese</h5>
 							<div class="doctor-message">
-								<p>Please go for at last 10 mins walk everyday.
-								This is very important to be healthy. You canPlease go for at last 10 mins walk everyday. This is very important to be healthy. You canPlease go for at last 10 mins walk everyday. This is very important to be healthy. You can</p>
+								<p>{{item.description}}</p>
 							</div>
 							<small class="timestamp pull-right">10 march 9am</small>
 						</div>
