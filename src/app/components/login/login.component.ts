@@ -1,3 +1,4 @@
+import { CookieService } from 'ngx-cookie';
 import { HeaderService } from './../../services/header/header.service';
 import { Router } from "@angular/router";
 import { apConfig } from "./../../../global";
@@ -33,16 +34,20 @@ export class LoginComponent implements OnInit {
     public authenticationService: AuthenticationService,
     private headerService: HeaderService,
     private http: Http,
+    // private _cookieService: CookieService
   ) { }
 
   ngOnInit() {
-    localStorage.setItem('authenticationToken', 'something');
+    // return this._cookieService.getAll();
+  }
 
-    if (localStorage.getItem('authenticationToken')!==null) {
+
+  private authCheck() {
+    localStorage.setItem('authenticationToken', 'something');
+    if (localStorage.getItem('authenticationToken') !== null) {
       this.router.navigate(['/profile']);
     }
   }
-
 
   loginWithGmail() {
     // this.authenticationService.login();
